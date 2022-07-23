@@ -1,0 +1,7 @@
+2022-07-22 12:37:37,212 -- DEBUG -- Using proactor: IocpProactor - 626 --proactor_events.py 
+2022-07-22 12:37:37,221 -- DEBUG -- Starting new HTTPS connection (1): api.coingecko.com:443 - 1001 --connectionpool.py 
+2022-07-22 12:37:39,224 -- DEBUG -- https://api.coingecko.com:443 "GET /api/v3/coins/list?include_platform=false HTTP/1.1" 200 None - 456 --connectionpool.py 
+2022-07-22 12:37:40,585 -- DEBUG -- Starting new HTTPS connection (1): api.coingecko.com:443 - 1001 --connectionpool.py 
+2022-07-22 12:37:40,938 -- DEBUG -- https://api.coingecko.com:443 "GET /api/v3/coins/01coin HTTP/1.1" 200 None - 456 --connectionpool.py 
+2022-07-22 12:37:40,981 -- DEBUG -- Starting new HTTPS connection (1): assets.coingecko.com:443 - 1001 --connectionpool.py 
+2022-07-22 12:37:41,110 -- DEBUG -- https://assets.coingecko.com:443 "GET /coins/images/5720/thumb/F1nTlw9I_400x400.jpg?1547041588 HTTP/1.1" 503 None - 456 --connectionpool.py 
