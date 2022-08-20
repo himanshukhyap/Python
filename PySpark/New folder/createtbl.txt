@@ -1,0 +1,9 @@
+%sql
+CREATE TABLE mvhdadw.s_sat_county ( 
+	county_key           BIGINT,
+	county_name          STRING,
+	county_code          BIGINT,
+	county_short_name    STRING,
+	updated              TIMESTAMP,
+	created              TIMESTAMP
+ )USING DELTA;

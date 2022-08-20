@@ -4,3 +4,7 @@ display(dbutils.fs.ls(raw_data_folder))
 #df = spark.read.format('delta').load(f'{raw_data_folder}{table}')
 #df.write.mode("overwrite").format("delta").saveAsTable('bluepearl.invoicesummaryflashreports_new')
 #display(df)
+
+
+hosp_df = spark.read.format('delta').load(os.path.join(raw_data_folder, "TB_CMD_HOSP"))
+hosp_df.display()

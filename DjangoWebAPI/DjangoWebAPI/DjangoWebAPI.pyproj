@@ -7,6 +7,7 @@
     </InterpreterId>
     <TestFramework>Pytest</TestFramework>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <WebBrowserPort>5000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,7 +41,6 @@
     <Compile Include="CoinApi\serializers.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CoinApi\tests.py" />
     <Compile Include="CoinApi\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -51,24 +51,10 @@
     <Compile Include="DjangoWebAPI\settings.py" />
     <Compile Include="DjangoWebAPI\urls.py" />
     <Compile Include="DjangoWebAPI\wsgi.py" />
-    <Compile Include="tutorials\admin.py" />
-    <Compile Include="tutorials\apps.py" />
-    <Compile Include="tutorials\migrations\__init__.py" />
-    <Compile Include="tutorials\models.py" />
-    <Compile Include="tutorials\serializers.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tutorials\tests.py" />
-    <Compile Include="tutorials\urls.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tutorials\views.py" />
-    <Compile Include="tutorials\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoinApi\templates\CoinApi\index.html" />
     <Content Include="requirements.txt" />
-    <Content Include="tutorials\templates\tutorials\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CoinApi\" />
@@ -76,10 +62,6 @@
     <Folder Include="CoinApi\templates\" />
     <Folder Include="CoinApi\templates\CoinApi\" />
     <Folder Include="DjangoWebAPI\" />
-    <Folder Include="tutorials\" />
-    <Folder Include="tutorials\migrations\" />
-    <Folder Include="tutorials\templates\" />
-    <Folder Include="tutorials\templates\tutorials\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

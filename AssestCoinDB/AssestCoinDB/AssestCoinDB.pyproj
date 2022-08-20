@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5da8e3f5-437d-448d-8233-db9f51a282df</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GetImagess.py</StartupFile>
+    <StartupFile>Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

@@ -1,3 +1,12 @@
 from django.contrib import admin
 
-# Register your models here.
+from CoinApi.models import AssestManager
+
+@admin.register(AssestManager)
+class AssestManagerAdmin(admin.ModelAdmin):
+    list_display=['AssestId',
+                 'Symbol',
+                 'Name',
+                  'ThumbImage',
+                 'SmallImage','LargeImage']
+    

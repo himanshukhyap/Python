@@ -19,12 +19,12 @@ coincap1 =   'https://api.coincap.io/v2/assets?limit=2000&offset=0'
 coincap2 =   'https://api.coincap.io/v2/assets?limit=1000&offset=2000'
 
 async def getAssest():
-     await getAssestManagerDataCoingecko(coingecko)
-     await getAssestManagerCoincap(coincap1) 
-     await getAssestManagerCoincap(coincap2)
-     await getAssestDetailsCoincap(coincap1)
-     await getAssestDetailsCoincap(coincap2)
-     await getAssestDetailsCoingecko(coingecko)
+    await getAssestManagerDataCoingecko(coingecko)
+    await getAssestManagerCoincap(coincap1) 
+    await getAssestManagerCoincap(coincap2)
+    await getAssestDetailsCoincap(coincap1)
+    await getAssestDetailsCoincap(coincap2)
+    await getAssestDetailsCoingecko(coingecko)
      
      
 

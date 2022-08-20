@@ -23,11 +23,11 @@ async def SingleGetData(api):
             data = response.json()
             findQuery = AssestManagercol.find_one({ "AssestId": data["id"] })
             if findQuery == None:
-                for x in response.json()['image']:
-                    imgurl = str(response.json()['image'][x])
-                    print(type(imgurl))
-                    fileName = "D:\Python\Python\{}\{}.jpg".format(response.json()['id'],x)
-                    await ImageGet(imgurl,fileName)
+                #for x in response.json()['image']:
+                #    imgurl = str(response.json()['image'][x])
+                #    print(type(imgurl))
+                #    fileName = "D:\Python\Python\{}\{}.jpg".format(response.json()['id'],x)
+                #    await ImageGet(imgurl,fileName)
 
 
                 obj = {'AssestId':response.json()['id'], 
