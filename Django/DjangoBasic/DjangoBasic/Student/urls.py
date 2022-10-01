@@ -10,6 +10,7 @@ router.register("",views.StudentApi,basename="Student")
 urlpatterns = [
     path('', include(router.urls)),
    
+   
   
 ]
 #urlpatterns = [

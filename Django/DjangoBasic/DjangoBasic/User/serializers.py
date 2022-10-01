@@ -20,3 +20,10 @@ class AlbumSerializer(serializers.ModelSerializer):
                   'release_date','num_stars')
 
    
+class DetailsSerializer(serializers.ModelSerializer):
+    Albumbymusician = AlbumSerializer(many=True, read_only=True)
+    class Meta:
+         model = Musician
+         fields = ('first_name',
+                  'last_name',
+                  'instrument','Albumbymusician')

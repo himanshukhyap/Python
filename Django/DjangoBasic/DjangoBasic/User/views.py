@@ -9,17 +9,18 @@ from rest_framework.parsers import JSONParser
 from rest_framework import status
 import json
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 def index(request):
      template = loader.get_template('FirstHtml.html')
      return HttpResponse(template.render())
 
-def GetMusician(request):
-     #return HttpResponse("Hello world!")
-     if request.method == 'GET':
-         Musicians = Musician.objects.all()
-         Mserializer = MusicianSerializer(Musicians, many=True)
-         return JsonResponse(Mserializer.data, safe=False)
+class GetMusician(APIView):
+    def get(self,request,pk=None,format=None):
+     
+             Musicians = Musician.objects.all()
+             Mserializer = MusicianSerializer(Musicians, many=True)
+             return Response(Mserializer.data)
 
 def GetMusicianDetails(request):
      #return HttpResponse("Hello world!")

@@ -9,7 +9,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 
 router = DefaultRouter()
-router = router.register("CoinApi",views.AssestManagerViewSet,basename="AssestManager")
+router = router.register("CoinApi",views.AssestManagerViewSet)
 urlpatterns = [ 
     path("coin/",include(router,urls))
     #path('', views.AssestManagerViewSet,name="GetAllAssestManager"),

@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('Musician',views.GetMusician,name="Musician"),
-    path('Album',views.GetMusicianDetails,name="Album"),
-    path('Album/<int:pk>',views.GetMusicianDetailsByMusicanId,name="Musiciandetails")
+    path('musician',views.GetMusician.as_view()),   #Class based method 
+    path('album',views.GetMusicianDetails,name="Album"),  #function based method
+    path('album/<int:pk>',views.GetMusicianDetailsByMusicanId,name="Musiciandetails")
 ]
