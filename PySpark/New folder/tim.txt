@@ -1,0 +1,32 @@
+%run /Users/tim.gottgetreu@effem.com/Functions/Banfield_Functions
+
+
+# Define the folder that contains the Banfield data our engineering team ingests with Kyte
+raw_data_folder = "/mnt/pdp-read/KYTE/BANFIELD/"
+
+# View the ingested tables
+display(dbutils.fs.ls(raw_data_folder))
+
+
+
+
+tables_of_interest = ['TB_CMF_PET_VST_EVENT','TB_CMD_CLNDR']
+
+
+df_dict = {}
+for d in tables_of_interest:
+  print('reading in....',d)
+  df_raw = spark.read.format('delta').load(os.path.join(raw_data_folder, d))
+  if d in de_dup_key_dict:
+    df_dict[d] = dedupData(df_raw,de_dup_key_dict[d]['Primary_Keys'],de_dup_key_dict[d]['de_dupe_columns'])
+    print ('Table -->', d, 'De-Duped using---> ', de_dup_key_dict[d]['Primary_Keys'], ' <----Is this what you want?')
+    #display(df_dict[d])
+  else:
+    print ('!!!-WARNING-!!! ', d, ' Not DE-DUPED. Returning RAW data')
+    df_dict[d] = df_raw
+    #display(df_dict[d])
+
+
+
+banfield_visit = (df_dict['TB_CMF_PET_VST_EVENT'])
+banfield_visit.createOrReplaceTempView('banfield_visit')

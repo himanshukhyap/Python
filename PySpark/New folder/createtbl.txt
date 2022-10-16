@@ -7,3 +7,9 @@ CREATE TABLE mvhdadw.s_sat_county (
 	updated              TIMESTAMP,
 	created              TIMESTAMP
  )USING DELTA;
+
+
+
+drop table using 
+
+dbutils.fs.rm('dbfs:/user/hive/warehouse/curated.db/hub_pet',recurse=True)
