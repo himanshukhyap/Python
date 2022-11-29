@@ -8,7 +8,7 @@ CREATE TABLE mvhdadw.s_sat_county (
 	created              TIMESTAMP
  )USING DELTA;
 
-
+Cohort_Analysis_retention_SY_2021.write.mode("overwrite").option("overwriteSchema","true").format("delta").saveAsTable('mvhda.Cohort_Analysis_retention_SY_2021')
 
 drop table using 
 

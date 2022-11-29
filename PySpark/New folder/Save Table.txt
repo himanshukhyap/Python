@@ -1,3 +1,6 @@
 vca_county.write.mode("overwrite").saveAsTable("banfield.vca_hosp_county_msa")
 
 df.write.mode("overwrite").format("delta").saveAsTable('bluepearl.invoicesummaryflashreports_new')
+
+
+Cohort_Analysis_retention_SY_2021.write.mode("overwrite").option("overwriteSchema","true").format("delta").saveAsTable('mvhda.Cohort_Analysis_retention_SY_2021')
