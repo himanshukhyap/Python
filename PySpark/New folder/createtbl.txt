@@ -1,0 +1,15 @@
+%sql
+CREATE TABLE mvhdadw.s_sat_county ( 
+	county_key           BIGINT,
+	county_name          STRING,
+	county_code          BIGINT,
+	county_short_name    STRING,
+	updated              TIMESTAMP,
+	created              TIMESTAMP
+ )USING DELTA;
+
+Cohort_Analysis_retention_SY_2021.write.mode("overwrite").option("overwriteSchema","true").format("delta").saveAsTable('mvhda.Cohort_Analysis_retention_SY_2021')
+
+drop table using 
+
+dbutils.fs.rm('dbfs:/user/hive/warehouse/curated.db/hub_pet',recurse=True)

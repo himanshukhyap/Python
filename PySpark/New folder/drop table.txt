@@ -1,0 +1,3 @@
+drop table using 
+
+dbutils.fs.rm('dbfs:/user/hive/warehouse/curated.db/hub_pet',recurse=True)
