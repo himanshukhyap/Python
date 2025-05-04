@@ -1,6 +1,0 @@
-windowSpec  = Window.partitionBy('cluster_id').orderBy(F.col('Open_Req_percent').desc())
-vca_kpi_cluster_rank = vca_kpi_cluster.withColumn('Rank', F.row_number().over(windowSpec))
-vca_kpi_cluster_rank.display()
-
-
-

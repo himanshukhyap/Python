@@ -1,5 +1,0 @@
-django
-django-cors-headers
-pyjwt
-djangorestframework
-djangorestframework-jwt
